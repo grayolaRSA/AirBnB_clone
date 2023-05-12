@@ -2,6 +2,7 @@
 """module that serializes and deserializes json instances"""
 import json
 import os.path
+from models.base_model import BaseModel
 
 
 class FileStorage:
@@ -25,16 +26,16 @@ class FileStorage:
     def save(self):
         """serialise object into json file"""
         with open(self.__file_path, 'w') as f:
-            return json.dump(self.__objects, f)
+            objs = {}
+            for key, value in self.__objects.items():
+                objs[key] = value.to_dict()
+            return json.dump(objs, f)
 
     def reload(self):
         """deserialises json file into object"""
         if os.path.exists(self.__file_path):
             with open(self.__file_path, 'r') as f:
-                try:
-                    objs = json.load(f)
-                except json.decoder.JSONDecodeError:
-                    return
+                objs = json.load(f)
                 for key, value in objs.items():
                     cls_name, obj_id = key.split(".")
                     cls = eval(cls_name)
