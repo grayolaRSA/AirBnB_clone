@@ -2,6 +2,7 @@
 """module for the place"""
 from models.base_model import BaseModel
 
+
 class Place(BaseModel):
     """
     class for places that inherits from base models
