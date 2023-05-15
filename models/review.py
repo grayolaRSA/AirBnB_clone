@@ -2,6 +2,7 @@
 """module for reviews"""
 from models.base_model import BaseModel
 
+
 class Review(BaseModel):
     """
     class for customer reviews based on various attributes
