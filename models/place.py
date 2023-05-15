@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """module for the place"""
-
+from models.base_model import BaseModel
 
 class Place(BaseModel):
     """
