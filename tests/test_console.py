@@ -7,6 +7,8 @@ import console
 import inspect
 import pep8
 import unittest
+import datetime
+from models.base_model import BaseModel
 HBNBCommand = console.HBNBCommand
 
 
