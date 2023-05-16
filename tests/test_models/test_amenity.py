@@ -3,12 +3,12 @@
 import unittest
 from models.amenity import Amenity
 from models.base_model import BaseModel
+import datetime
 
 
 class TestAmenity(unittest.TestCase):
     """class to test amenity class"""
 
-    @classmethod
     def setUp(cls):
         """
         Runs for each test case.
@@ -16,7 +16,6 @@ class TestAmenity(unittest.TestCase):
         cls.amenity1 = Amenity()
         cls.amenity1.name = "Parking"
 
-    @classmethod
     def tearDown(cls):
         """
         Cleans up after each test.
