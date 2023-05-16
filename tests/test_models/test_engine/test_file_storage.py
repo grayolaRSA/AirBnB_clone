@@ -4,7 +4,6 @@ import unittest
 import json
 import os
 from models.base_model import BaseModel
-from models.engine.file_storage import FileStorage
 
 
 class TestFileStorage(unittest.TestCase):
@@ -14,6 +13,7 @@ class TestFileStorage(unittest.TestCase):
     def setUp(cls):
         """Runs for each test case.
         """
+        from models.engine.file_storage import FileStorage
         cls.base_model1 = BaseModel()
         cls.file_storage1 = FileStorage()
 
@@ -33,17 +33,21 @@ class TestFileStorage(unittest.TestCase):
     def test_types(self):
         """Test if attributes type is correct.
         """
+        from models.engine.file_storage import FileStorage
         self.assertIsInstance(self.file_storage1, FileStorage)
         self.assertEqual(type(self.file_storage1), FileStorage)
 
     def test_functions(self):
         """Test if FileStorage module is documented.
         """
+        from models import storage
+        from models.engine.file_storage import FileStorage
         self.assertIsNotNone(FileStorage.__doc__)
 
     def test_save(self):
         """Test if save method is working correctly.
         """
+        from models import storage
         self.file_storage1.save()
         self.assertEqual(os.path.exists(storage._FileStorage__file_path), True)
         self.assertEqual(storage.all(), storage._FileStorage__objects)
@@ -51,6 +55,8 @@ class TestFileStorage(unittest.TestCase):
     def test_reload(self):
         """Tests if reload method is working correctly.
         """
+        from models import storage
+        from models.engine.file_storage import FileStorage
         self.base_model1.save()
         self.assertEqual(os.path.exists(storage._FileStorage__file_path), True)
         dobj = storage.all()
