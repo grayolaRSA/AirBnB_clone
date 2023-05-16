@@ -109,10 +109,10 @@ class HBNBCommand(cmd.Cmd):
                     setattr(obj, attr_name, attr_val)
                     obj.save()
 
-    def do_quit(self, *args):
+    def do_quit(self, args):
         return True
 
-    def do_EOF(self, *args):
+    def do_EOF(self, args):
         return True
 
     def emptyline(self):
