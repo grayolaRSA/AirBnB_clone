@@ -34,3 +34,8 @@ button:hover {
     font-weight:400;
     font-size:14px;
 }
+.amenities {
+    height:100%;
+    width:25%;
+    border-right:#DDDDDD 1px;
+}
