@@ -2,13 +2,15 @@ header {
     color: white;
     height: 70px;
     width: 100%;
-    border-bottom: 1px #CCCCCC;
+    border-bottom: 1px solid #CCCCCC;
     display: flex;
     align-items: left;
     justify-content: center;
 }
 
-.logo {
+header .logo {
     width: 20px;
     background-image: url("./images/logo.png");
+    background-size: cover;
+    background-repeat: no-repeat;
 }
