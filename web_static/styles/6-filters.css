@@ -4,9 +4,12 @@
   width: 100%;
   border: 1px solid #DDDDDD;
   border-radius: 4px;
+  position: relative;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
+  flex-direction: row;
+  wrap: nowrap;
 }
 
 .filters button {
@@ -61,5 +64,5 @@
 }
 
 .locations:hover .popover, .amenities:hover .popover {
-    display: block
+    display: block;
 }
