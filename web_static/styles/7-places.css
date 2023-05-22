@@ -7,23 +7,22 @@
     justify-content: center;
 }
 
-.places > h1 {
+.places h1 {
+    text-align: left;
     font-size: 30px;
-    padding-left: 20px;
-    padding-top: 20px;
-    margin-bottom: 0px;
-    flex: 0 1 100%;
 }
-.places > article {
+.article {
     width: 390px;
     padding: 20px 20px 20px 20px;
     margin: 20px 20px 20px 20px;
     border: 1px solid #FF5A5F;
     border-radius: 4px;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    justify-content: flex-start;
+    position: relative;
 }
-
-.places > article > h2 {
+.article h2 {
     font-size: 30px;
+    align-self: center;
 }
