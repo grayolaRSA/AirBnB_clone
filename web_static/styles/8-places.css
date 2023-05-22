@@ -28,7 +28,7 @@
 
 .places > article > h2 {
     font-size: 30px;
-    margin: 0 0 0 0;
+    margin: 0;
     align-self: left;
 }
 
@@ -52,49 +52,62 @@
 }
 
 .information {
-    align-self: center;
     height: 80px;
     width: 100%;
     border-top: 1px solid #DDDDDD;
     border-bottom: 1px solid #DDDDDD;
     margin-top: 30px;
     display: flex;
-    justify-content: center;
+    flex-direction: row;
+    justify-content: space-between;
     align-items: center;
 }
 
 .max_guest, .number_rooms, .number_bathrooms {
     width: 100px;
-    text-align: center;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
 }
 
 .max_guest > p, .number_rooms > p, .number_bathrooms > p{
-    margin-top: auto;
-    margin-bottom: auto;
+    margin-top: 0;
+    margin-bottom: 0;
 }
 
 .guest_image {
-    margin-left: auto;
-    margin-right: auto;
-    height: 50px;
-    width: 50px;
+    margin-left: 0;
+    margin-right: 0;
+    height: 100%;
+    width: 100%;
     background: url("../images/icon_group.png") no-repeat center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .bed_image {
-    margin-left: auto;
-    margin-right: auto;
-    height: 50px;
-    width: 50px;
+    margin-left: 0;
+    margin-right: 0;
+    height: 100%;
+    width: 100%;
+    background-size: contain;
     background: url("../images/icon_bed.png") no-repeat center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .bath_image {
-    margin-left: auto;
-    margin-right: auto;
-    height: 50px;
-    width: 50px;
+    margin-left: 0;
+    margin-right: 0;
+    height: 100%;
+    width: 100%;
+    background-size: contain;
     background: url("../images/icon_bath.png") no-repeat center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .user > p {
