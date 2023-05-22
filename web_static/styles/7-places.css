@@ -5,24 +5,30 @@
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
+    align-items: flex-start;
 }
 
-.places h1 {
-    text-align: left;
+.places > h1 {
     font-size: 30px;
+    padding-left: 20px;
+    padding-top: 20px;
+    margin-bottom: 0px;
+    flex: 0 1 100%;
+    align-items: center;
+    justify-content: top;
 }
-.article {
+.places > article {
     width: 390px;
     padding: 20px 20px 20px 20px;
     margin: 20px 20px 20px 20px;
     border: 1px solid #FF5A5F;
     border-radius: 4px;
     display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    position: relative;
+    justify-content: center;
+    align-items: flex-start;
 }
-.article h2 {
+.places > article > h2 {
     font-size: 30px;
-    align-self: center;
+    margin: 0;
+    align-items: center;
 }
